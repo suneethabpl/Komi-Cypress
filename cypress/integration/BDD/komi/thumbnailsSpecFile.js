@@ -25,3 +25,8 @@ When("the User clicks on Youtube video to asserts it redirects successfully with
 Then("the User clicks on Youtube video to {string}", (youtubevideo) => {
     thumbnails.verifyVideoOnYoutubeSite(youtubevideo)
 })
+When("the User on the {string} module to click on {string} button to validate all relevant {string} links", (music, btn, play) => {
+    thumbnails.music(music)
+    thumbnails.moreBtn(btn)
+    thumbnails.links(play)
+})

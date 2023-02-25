@@ -77,11 +77,25 @@ class Thumbnail {
     verifyVideoOnYoutubeSite(youtubevideo) {
         cy.visit('https://www.youtube.com/embed/c0-hvjV2A5Y?autoplay=1&mute=1&controls=1&origin=https%3A%2F%2Ftestdummy.komi.io&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=1')
         cy.contains(youtubevideo).invoke("removeAttr", "target").click({ timeout: 5000 });
-        cy.get('.eom-button-row').contains('Accept all').scrollIntoView().should('be.visible').click();
+        cy.get('.eom-button-row').contains('Accept all').scrollIntoView().should('exist').click();
     }
 
     music(music) {
         cy.contains(music).scrollIntoView().should('have.text', 'Single Music')
+    }
+
+    moreBtn(btn) {
+        cy.contains(btn).click();
+    }
+
+    links(play) {
+        cy.get('[data-testid="music-item"]').should('have.length', '4');
+        cy.get('[aria-label="spotify-play-button"]').find('span').contains(play).click().should('exist');
+        cy.get('[aria-label="apple_music-play-button"]').find('span').contains(play).click().should('exist');
+        cy.get('[aria-label="youtube_music-play-button"]').find('span').contains(play).click().should('exist');
+        cy.get('.accept-cookies-button').contains('ACCEPT').click();
+        cy.get('[aria-label="deezer-play-button"]').find('span').contains(play).click().should('exist');
+        cy.get('[data-testid="music-item"]').find('span').contains(play).click().should('exist');
     }
 
 }

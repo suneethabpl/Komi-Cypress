@@ -21,3 +21,6 @@ When the User clicks on Youtube video to asserts it redirects successfully with 
 
 Scenario: test Youtube video on youtube site
 When the User clicks on Youtube video to 'Watch on YouTube'
+
+Scenario: test Single Music module
+When the User on the 'Single Music' module to click on 'More' button to validate all relevant 'Play' links
