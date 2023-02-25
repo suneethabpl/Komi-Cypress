@@ -24,3 +24,7 @@ When the User clicks on Youtube video to 'Watch on YouTube'
 
 Scenario: test Single Music module
 When the User on the 'Single Music' module to click on 'More' button to validate all relevant 'Play' links
+
+Scenario: test Subscription module
+When the User clicks on a 'Subscribe' module to go to 'Sign up for my newsletter' to 'Submit' the form successfully
+Then the User should see 'The form was submitted successfully. Thank you!'

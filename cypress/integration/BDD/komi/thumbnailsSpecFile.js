@@ -30,3 +30,9 @@ When("the User on the {string} module to click on {string} button to validate al
     thumbnails.moreBtn(btn)
     thumbnails.links(play)
 })
+When("the User clicks on a {string} module to go to {string} to {string} the form successfully", (Subscribe, signupfornews, submit) => {
+    thumbnails.subscription(Subscribe, signupfornews, submit);
+})
+Then("the User should see {string}", (message) => {
+    thumbnails.submitFormMessage(message)
+})

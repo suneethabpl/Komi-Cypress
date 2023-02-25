@@ -98,6 +98,20 @@ class Thumbnail {
         cy.get('[data-testid="music-item"]').find('span').contains(play).click().should('exist');
     }
 
+    subscription(Subscribe, signupfornews, submit) {
+        cy.get(':nth-child(4) > .ant-btn > .ant-typography').scrollIntoView().contains(Subscribe).click();
+        cy.get('.flex--1 > .text--semibold24').contains(signupfornews).click();
+        cy.fixture("signupLoginForSpotify.json").then((user) => {
+            cy.get('#INPUT').type(user.name);
+            cy.get('#EMAIL_ADDRESS').type(user.email);
+        })
+        cy.get('.ant-form-item-control-input-content > .ant-btn').contains(submit).click();
+    }
+
+    submitFormMessage() {
+        cy.get('.ant-message').should('be.visible').should('have.text', 'The form was submitted successfully. Thank you!')
+    }
+
 }
 const thumbnails = new Thumbnail();
 
