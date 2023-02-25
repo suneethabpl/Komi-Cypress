@@ -63,6 +63,27 @@ class Thumbnail {
         cy.get('.music-item--single').scrollIntoView().find('span').should('be.visible').contains(postsaved);
     }
 
+    youtubeVideo(komi) {
+        cy.get('.youtube-player__overlay').scrollIntoView().find('button').should('be.visible').click();
+        cy.intercept("https://www.youtube.com/youtubei/v1/player?key=AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8&prettyPrint=false", (req) => {
+            req.continue((res) => {
+                res.send();
+            });
+        });
+        cy.url().should('include', komi)
+
+    }
+
+    verifyVideoOnYoutubeSite(youtubevideo) {
+        cy.visit('https://www.youtube.com/embed/c0-hvjV2A5Y?autoplay=1&mute=1&controls=1&origin=https%3A%2F%2Ftestdummy.komi.io&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=1')
+        cy.contains(youtubevideo).invoke("removeAttr", "target").click({ timeout: 5000 });
+        cy.get('.eom-button-row').contains('Accept all').scrollIntoView().should('be.visible').click();
+    }
+
+    music(music) {
+        cy.contains(music).scrollIntoView().should('have.text', 'Single Music')
+    }
+
 }
 const thumbnails = new Thumbnail();
 

@@ -19,3 +19,9 @@ When("the User clicks on the {string} button to validate {string}", (presave, pr
 Then("the User should see {string} button", (postsaved) => {
     thumbnails.postSavedBtn(postsaved);
 })
+When("the User clicks on Youtube video to asserts it redirects successfully with {string} site", (komi) => {
+    thumbnails.youtubeVideo(komi);
+})
+Then("the User clicks on Youtube video to {string}", (youtubevideo) => {
+    thumbnails.verifyVideoOnYoutubeSite(youtubevideo)
+})
