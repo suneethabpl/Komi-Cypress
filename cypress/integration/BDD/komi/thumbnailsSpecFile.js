@@ -12,3 +12,10 @@ When("the User clicks on the side navigation arrow on the Music Tracks", () => {
     thumbnails.sideNavigationArrow();
     thumbnails.validatepagination();
 })
+When("the User clicks on the {string} button to validate {string}", (presave, presaved) => {
+    thumbnails.preSaveBtn(presave)
+    thumbnails.preSavedBtn(presaved);
+})
+Then("the User should see {string} button", (postsaved) => {
+    thumbnails.postSavedBtn(postsaved);
+})

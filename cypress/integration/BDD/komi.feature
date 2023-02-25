@@ -11,3 +11,7 @@ When the User navigates to 'Music Tracks' section
 
 Scenario: test side navigation arrow
 When the User clicks on the side navigation arrow on the Music Tracks
+
+Scenario: test pre save button
+When the User clicks on the 'Pre-save' button to validate 'PRE-SAVED'
+Then the User should see 'Pre-saved' button

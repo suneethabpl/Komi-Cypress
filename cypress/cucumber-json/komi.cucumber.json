@@ -23,7 +23,7 @@
             "name": "the User visits to 'Home' page",
             "result": {
               "status": "passed",
-              "duration": 1646000000
+              "duration": 1139000000
             }
           },
           {
@@ -33,7 +33,7 @@
             "name": "the User visibles all 'thumbnails'",
             "result": {
               "status": "passed",
-              "duration": 73000000
+              "duration": 566000000
             }
           },
           {
@@ -43,7 +43,7 @@
             "name": "the User navigates to 'Music Tracks' section",
             "result": {
               "status": "passed",
-              "duration": 333000000
+              "duration": 281000000
             }
           }
         ]
@@ -63,7 +63,7 @@
             "name": "the User visits to 'Home' page",
             "result": {
               "status": "passed",
-              "duration": 758000000
+              "duration": 716000000
             }
           },
           {
@@ -73,7 +73,7 @@
             "name": "the User visibles all 'thumbnails'",
             "result": {
               "status": "passed",
-              "duration": 677000000
+              "duration": 662000000
             }
           },
           {
@@ -83,7 +83,57 @@
             "name": "the User clicks on the side navigation arrow on the Music Tracks",
             "result": {
               "status": "passed",
-              "duration": 263000000
+              "duration": 224000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "komi-apllication;test-pre-save-button",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "test pre save button",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "the User visits to 'Home' page",
+            "result": {
+              "status": "passed",
+              "duration": 658000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the User visibles all 'thumbnails'",
+            "result": {
+              "status": "passed",
+              "duration": 556000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "the User clicks on the 'Pre-save' button to validate 'PRE-SAVED'",
+            "result": {
+              "status": "passed",
+              "duration": 15568000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "the User should see 'Pre-saved' button",
+            "result": {
+              "status": "passed",
+              "duration": 47000000
             }
           }
         ]
