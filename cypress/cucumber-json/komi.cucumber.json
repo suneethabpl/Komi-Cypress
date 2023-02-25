@@ -1,0 +1,53 @@
+[
+  {
+    "description": "    test Komi application",
+    "keyword": "Feature",
+    "name": "Komi apllication",
+    "line": 1,
+    "id": "komi-apllication",
+    "tags": [],
+    "uri": "komi.feature",
+    "elements": [
+      {
+        "id": "komi-apllication;test-music-tracks-section",
+        "keyword": "Scenario",
+        "line": 9,
+        "name": "test Music Tracks section",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "the User visits to 'Home' page",
+            "result": {
+              "status": "passed",
+              "duration": 672000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the User visibles all 'thumbnails'",
+            "result": {
+              "status": "passed",
+              "duration": 577000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "the User navigates to 'Music Tracks' section",
+            "result": {
+              "status": "passed",
+              "duration": 394000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+    "name": "cypressautomation",
+    "version": "1.0.0",
+    "description": "Automationtesting for Komi application in Cypress",
+    "main": "index.js",
+    "author": "Suneetha",
+    "license": "ISC",
+    "devDependencies": {
+        "cypress": "^12.5.1"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true,
+        "cucumberJson": {
+            "generate": true,
+            "outputFolder": "cypress/cucumber-json",
+            "filePrefix": "",
+            "fileSuffix": ".cucumber"
+        }
+
+    }
+}
