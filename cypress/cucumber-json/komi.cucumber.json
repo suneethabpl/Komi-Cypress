@@ -23,7 +23,7 @@
             "name": "the User visits to 'Home' page",
             "result": {
               "status": "passed",
-              "duration": 672000000
+              "duration": 1646000000
             }
           },
           {
@@ -33,7 +33,7 @@
             "name": "the User visibles all 'thumbnails'",
             "result": {
               "status": "passed",
-              "duration": 577000000
+              "duration": 73000000
             }
           },
           {
@@ -43,7 +43,47 @@
             "name": "the User navigates to 'Music Tracks' section",
             "result": {
               "status": "passed",
-              "duration": 394000000
+              "duration": 333000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "komi-apllication;test-side-navigation-arrow",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "test side navigation arrow",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "the User visits to 'Home' page",
+            "result": {
+              "status": "passed",
+              "duration": 758000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the User visibles all 'thumbnails'",
+            "result": {
+              "status": "passed",
+              "duration": 677000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "the User clicks on the side navigation arrow on the Music Tracks",
+            "result": {
+              "status": "passed",
+              "duration": 263000000
             }
           }
         ]
